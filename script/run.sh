@@ -8,13 +8,7 @@ trap finish SIGTERM SIGKILL
 
 DEFAULT_PORT=4730
 
-PARAMS="--backlog=32 \
-  --job-retries=0 \
-  --listen=0.0.0.0 \
-  --threads=4 \
-  --worker-wakeup=0 \
-  --log-file=none \
-  --file-descriptors=1024 \
+PARAMS="--listen=0.0.0.0 \
   --port=${GEARMAN_PORT:-$DEFAULT_PORT} \
   "
 
